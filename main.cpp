@@ -97,10 +97,12 @@ int main()
     pominieteWyrazy = wektorOryginalnyTekst.size() - wektorZapisanyTekst.size();
     cout << pominieteWyrazy << endl;
 
-    przypiszPominieteWyrazyDoWektora( pominieteWyrazy, wektorOryginalnyTekst, wektorZapisanyTekst, wektorPominietychWyrazow );
-
-    sort( wektorPominietychWyrazow.begin(), wektorPominietychWyrazow.end() );
-    wydrukujPominieteWyrazy ( wektorPominietychWyrazow );
+    if(pominieteWyrazy > 0)
+    {
+        przypiszPominieteWyrazyDoWektora( pominieteWyrazy, wektorOryginalnyTekst, wektorZapisanyTekst, wektorPominietychWyrazow );
+        sort( wektorPominietychWyrazow.begin(), wektorPominietychWyrazow.end() );
+        wydrukujPominieteWyrazy ( wektorPominietychWyrazow );
+    }
 
     return 0;
 }
